@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wood"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/app_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:fontFamily="@font/orange"
+        android:text="@string/main_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_big" />
+
+    <TextView
+        android:id="@+id/displayed_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/app_logo"
+        android:layout_margin="@dimen/small_margin"
+        android:fontFamily="@font/cafeandbrewery"
+        android:text="@string/let_s_start"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayed_text"
+        android:orientation="horizontal"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/orange"
+                android:text="@string/player_1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/player_one_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/orange"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_big" />
+
+            <ImageView
+                android:id="@+id/pizza_buton_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:onClick="pizzaForPlayerOne"
+                android:src="@drawable/ic_pizza1" />
+
+            <Button
+                android:id="@+id/cheese_button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/recomended_margin"
+                android:layout_marginTop="@dimen/recomended_margin"
+                android:background="@android:color/darker_gray"
+                android:onClick="cheeseForPlayerOne"
+                android:text="@string/cheese_button"
+
+                />
+
+            <ImageView
+                android:id="@+id/beer_button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/recomended_margin"
+                android:onClick="beerForPlayerOne"
+                android:src="@drawable/ic_beer3" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/recomended_margin"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/orange"
+                android:text="@string/player_2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/player_two_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/orange"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_big" />
+
+            <ImageView
+                android:id="@+id/pizza_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:onClick="pizzaForPlayerTwo"
+                android:src="@drawable/ic_pizza3s" />
+
+            <Button
+                android:id="@+id/cheese_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/recomended_margin"
+                android:layout_marginTop="@dimen/recomended_margin"
+                android:background="@android:color/darker_gray"
+                android:onClick="cheeseForPlayerTwo"
+                android:text="@string/cheese_button" />
+
+            <ImageView
+                android:id="@+id/beer_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/recomended_margin"
+                android:onClick="beerForPlayerTwo"
+                android:src="@drawable/ic_pint_of_beer"
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/the_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/restart_button"
+        android:layout_marginLeft="@dimen/big_margin"
+        android:layout_marginRight="@dimen/big_margin"
+        android:onClick="endOfTheGame"
+        android:text="@string/the_end" />
+
+    <Button
+        android:id="@+id/restart_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:layout_marginLeft="@dimen/big_margin"
+        android:layout_marginRight="@dimen/big_margin"
+        android:onClick="Reset"
+        android:text="@string/restart" />
+
+
+</RelativeLayout>
